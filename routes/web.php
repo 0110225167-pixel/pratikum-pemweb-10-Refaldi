@@ -15,8 +15,8 @@ Route::get('/about', function () {
     return view('layouts.about');
 });
 
-Route::get('/contact', function () {
-    return view('layouts.about');
-});
+Route::get('/login', function () {
+    return view('layouts.login');
+})->name('login');
 
-Route::get('/staff',[StaffController::class, 'index']);
+Route::resource('staff', StaffController::class);
